@@ -1,0 +1,15 @@
+services:
+  cards:
+    build: .
+    image: cards:latest
+    volumes:
+      # Persist the cards database across container restarts
+      - cards-data:/root/.cards
+    # Override entrypoint to run specific commands
+    # Usage: docker-compose run --rm cards add "My task"
+    #        docker-compose run --rm cards list
+    #        docker-compose run --rm cards --help
+
+volumes:
+  cards-data:
+    driver: local
