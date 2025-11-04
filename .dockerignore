@@ -44,6 +44,7 @@ coverage.xml
 # Documentation
 *.md
 !README.md
+!DOCKER.md
 
 # Development files
 Makefile
